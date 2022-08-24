@@ -102,6 +102,7 @@ public abstract class Conta {
     	if(this.numero != outra.numero) {
     		return false;
     	}
+    	
     	return true;
     }
     

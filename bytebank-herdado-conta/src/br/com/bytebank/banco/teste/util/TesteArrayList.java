@@ -1,6 +1,8 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
@@ -11,9 +13,8 @@ public class TesteArrayList {
 	public static void main(String[] args) {
 		
 		//Generics existem para não misturar os tipos, código mais tipado
-		ArrayList<Conta> lista = new ArrayList<Conta>();
+		List<Conta> lista = new Vector<Conta>();
 		
-		ArrayList<String> nomes = new ArrayList<String>();
 		
 		Conta cc = new ContaCorrente(22, 11);
 		lista.add(cc);
@@ -34,10 +35,10 @@ public class TesteArrayList {
 	
 	
 		Conta cc1 = new ContaCorrente(22, 11);
-		lista.add(cc);
+		lista.add(cc1);
 		
 		Conta cp1 = new ContaPoupanca(22, 11);
-		lista.add(cp);
+		lista.add(cp1);
 		
 		
 		for (int i = 0; i < lista.size(); i++) {

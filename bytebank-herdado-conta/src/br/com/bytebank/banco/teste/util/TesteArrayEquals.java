@@ -29,7 +29,7 @@ public class TesteArrayEquals {
 		Conta cp1 = new ContaPoupanca(22, 11);
 //		lista.add(cp1);
 
-		boolean exist = lista.equals(cp1);
+		boolean exist = lista.contains(cp1);
 		
 		System.out.println("Já existe? " + exist);
 		
