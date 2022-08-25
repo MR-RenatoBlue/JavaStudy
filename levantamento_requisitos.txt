@@ -1,0 +1,30 @@
+Descrição
+
+
+Prospecto Heber solicitou um sistema para marcação de ponto de horário de entrada/saída do trabalho. Ele citou que o sistema que ele utiliza passa por muitas instabilidades, causando desconfiança nas marcações
+
+
+
+##Requisitos Funcionais
+
+[RF001] O sistema deve permitir marcar os horários de entrada e saída
+
+[RF002] O sistema deve utilizar de e-mail e senha para entrar
+
+[RF003] O sistema deve gerar relatórios a respeito das marcações de entrada e saída
+
+[RF004] O sistema deve permitir ajustes para marcações erradas de horário/saída
+
+[RF005] O sistema deve ter apenas um botão para marcar o horário
+
+
+## Requisitos Não-Funcionais
+
+- Desempenho
+
+- Confiabilidade
+
+- Usabilidade
+
+- Segurança
+
