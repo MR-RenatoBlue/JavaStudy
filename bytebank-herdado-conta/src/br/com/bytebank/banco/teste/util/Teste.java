@@ -1,7 +1,6 @@
 package br.com.bytebank.banco.teste.util;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -43,30 +42,19 @@ public class Teste {
 		lista.add(cc2);
 		lista.add(cc3);
 		lista.add(cc4);
-
-		lista.sort(new Comparator<Conta>() { //classe anonima (sem nome) uhhhh
-
-				@Override
-				public int compare(Conta c1, Conta c2) {
-					return Integer.compare(c1.getNumero(), c2.getNumero());
-				}
-			}
-		);
 		
-		Comparator<Conta> comp = new Comparator<Conta>() { //classe anonima (sem nome) uhhhh
-
-			@Override
-			public int compare(Conta c1, Conta c2) {
+		//lambda function, get used to it!!
+		lista.sort( (c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero() ) );
+		
+		Comparator<Conta> comp = (Conta c1, Conta c2) -> {
 				String nomeC1 = c1.getTitular().getNome();
 				String nomeC2 = c2.getTitular().getNome();
 				return nomeC1.compareTo(nomeC2);
-
-			}
-
 		};
+		
+		lista.sort(comp);
+		
+		lista.forEach( (conta) -> System.out.println(conta + ", " + conta.getTitular().getNome()) );
 
-		for (Conta conta : lista) {
-			System.out.println(conta + ", " + conta.getTitular().getNome());
-		}
 	}
 }
